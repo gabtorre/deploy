@@ -263,7 +263,6 @@ func (c *Client) SymbolInfo(ctx context.Context, args types.RepoCommitPathPoint)
 		)
 	}
 
-	err = json.NewDecoder(resp.Body).Decode(&result)
 	if err != nil {
 		return nil, errors.Wrap(err, "decoding response body")
 	}
